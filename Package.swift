@@ -3,7 +3,6 @@ import PackageDescription
 let package = Package(
     name: "Cleverbot",
     targets: [
-        Target(name: "Runner", dependencies: ["Cleverbot"]),
         Target(name: "Cleverbot")
     ],
     dependencies: [
