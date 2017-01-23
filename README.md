@@ -1,0 +1,1 @@
+A port of [folz's cleverbot.py](https://github.com/folz/cleverbot.py) for Swift.
