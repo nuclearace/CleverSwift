@@ -83,13 +83,17 @@ public class Cleverbot {
         }
 
         data[0] = ("stimulus", message)
+        var base = 14
 
-        for i in 0..<7 where conversation[i] != "" {
+        for answer in conversation {
+            guard answer != "" else { break }
 
+            data[base] = (data[base].0, answer)
+
+            base -= 1
         }
 
         let encoded = String(encodeData().characters.dropFirst())
-
         let start = encoded.index(encoded.startIndex, offsetBy: 9)
         let finish = encoded.index(encoded.startIndex, offsetBy: 35)
 
