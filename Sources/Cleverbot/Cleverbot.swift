@@ -2,7 +2,8 @@ import Foundation
 
 public class Cleverbot {
     private let apiUrlString: String
-    private let session = URLSession.shared
+    private let session = URLSession(configuration: .default, delegate: nil,
+                                     delegateQueue: OperationQueue())
 
     private var cs = ""
 
