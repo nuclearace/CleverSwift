@@ -1,9 +1,13 @@
+// swift-tools-version:5.1
+
 import PackageDescription
 
 let package = Package(
     name: "Cleverbot",
-    targets: [
-        Target(name: "Cleverbot")
+    products: [
+        .library(name: "Cleverbot", targets: ["Cleverbot"])
     ],
-    exclude: ["Runner"]
+    targets: [
+        .target(name: "Cleverbot")
+    ]
 )
